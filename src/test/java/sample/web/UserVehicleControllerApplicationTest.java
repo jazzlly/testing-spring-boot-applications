@@ -58,5 +58,4 @@ public class UserVehicleControllerApplicationTest {
 		this.mvc.perform(get("/donald/vehicle").accept(MediaType.TEXT_PLAIN))
 				.andExpect(status().isOk()).andExpect(content().string("Honda Civic"));
 	}
-
 }

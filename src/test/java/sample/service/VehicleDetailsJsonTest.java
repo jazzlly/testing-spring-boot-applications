@@ -46,6 +46,13 @@ public class VehicleDetailsJsonTest {
 		assertThat(this.json.write(details)).hasJsonPathStringValue("@.make");
 		assertThat(this.json.write(details)).extractingJsonPathStringValue("@.make")
 				.isEqualTo("Honda");
+
+		// 可以用来检查mockMvc返回的结果
+		// then
+		// assertThat(response.getStatus()).isEqualTo(HttpStatus.OK.value());
+		// assertThat(response.getContentAsString()).isEqualTo(
+		//		jsonSuperHero.write(new SuperHero("Rob", "Mannon", "RobotMan")).getJson()
+		// );
 	}
 
 	@Test
